@@ -3,9 +3,18 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@/*": ["./*"],
-      "@components": ["./src/services/shared/components/index"]
+      "@/*": [
+        "./*"
+      ],
+      "@components": [
+        "./src/services/shared/components/index"
+      ]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ]
 }
