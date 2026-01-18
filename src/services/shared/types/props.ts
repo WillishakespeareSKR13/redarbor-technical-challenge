@@ -1,7 +1,8 @@
 import { DimensionValue, TextStyle, ViewStyle } from "react-native"
-import { ColorScheme, FontFamilyKeys, FontSizeKeys, SpaceSchema } from "../theme/types"
+import { ColorScheme, FontFamilyKeys, FontSizeKeys, RadiusSchema, SpaceSchema } from "../theme/types"
 
 export type PropsSpace = {
+  r?: RadiusSchema
   p?: SpaceSchema
   pt?: SpaceSchema
   pb?: SpaceSchema
@@ -16,6 +17,7 @@ export type PropsSpace = {
   mr?: SpaceSchema
   mx?: SpaceSchema
   my?: SpaceSchema
+  gap?: SpaceSchema
 }
 
 export type PropsSize = {
@@ -29,13 +31,15 @@ export type PropsSize = {
 
 export type PropsFlex = {
   flex?: number
-  flexGrow?: number
-  flexShrink?: number
-  flexBasis?: DimensionValue
-  alignSelf?: ViewStyle["alignSelf"]
-  justifyContent?: ViewStyle["justifyContent"]
-  alignItems?: ViewStyle["alignItems"]
-  alignContent?: ViewStyle["alignContent"]
+  grow?: number
+  shrink?: number
+  basis?: DimensionValue
+  self?: ViewStyle["alignSelf"]
+  justify?: ViewStyle["justifyContent"]
+  align?: ViewStyle["alignItems"]
+  content?: ViewStyle["alignContent"]
+  direction?: ViewStyle["flexDirection"]
+  wrap?: ViewStyle["flexWrap"]
 }
 
 export type PropsText = {
@@ -50,5 +54,3 @@ export type PropsColor = {
   c?: ColorScheme
   bg?: ColorScheme
 }
-
-export type PropsAll = PropsSpace & PropsSize & PropsFlex & PropsText & PropsColor
