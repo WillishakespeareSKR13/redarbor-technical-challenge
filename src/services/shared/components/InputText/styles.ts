@@ -18,11 +18,11 @@ export const Styles = StyleSheetTheme((theme, _: InputTextProps) => ({
     variants: {
       status: {
         validating: {
-          borderColor: theme.colors.blue[100],
+          borderColor: theme.colors.blue[500],
         },
         valid: {},
         invalid: {
-          borderColor: theme.colors.red[100],
+          borderColor: theme.colors.red[500],
         },
       },
     },

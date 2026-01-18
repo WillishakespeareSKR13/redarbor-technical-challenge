@@ -179,13 +179,13 @@ export const Styles = StyleSheetTheme((theme, props: HeaderProps) => {
         },
         status: {
           validating: {
-            color: theme.colors.blue[100],
+            color: theme.colors.blue[500],
           },
           valid: {
-            color: theme.colors.green[100],
+            color: theme.colors.green[500],
           },
           invalid: {
-            color: theme.colors.red[100],
+            color: theme.colors.red[500],
           },
         },
       },

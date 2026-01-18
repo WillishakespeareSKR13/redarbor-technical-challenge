@@ -1,27 +1,15 @@
-import AsyncStorage from "@react-native-async-storage/async-storage"
 import { create } from "zustand"
-import { createJSONStorage, persist, StateStorage } from "zustand/middleware"
+import { createJSONStorage, persist } from "zustand/middleware"
 
 import { themes } from "../theme"
 import { Theme, ThemeKeys } from "../theme/types"
+import { ZustandStorage } from "../types/zustand"
 
 interface ThemeStore {
   key: ThemeKeys
   theme: Theme
-  set: (theme: ThemeKeys) => void
+  setTheme: (theme: ThemeKeys) => void
   toggle?: () => void
-}
-
-const zustandStorage: StateStorage = {
-  setItem: async (name, value) => {
-    await AsyncStorage.setItem(name, value)
-  },
-  getItem: async (name) => {
-    return await AsyncStorage.getItem(name)
-  },
-  removeItem: async (name) => {
-    await AsyncStorage.removeItem(name)
-  },
 }
 
 export const useTheme = create<ThemeStore>()(
@@ -29,7 +17,7 @@ export const useTheme = create<ThemeStore>()(
     (set) => ({
       key: "light",
       theme: themes["light"],
-      set: (theme) => set(() => ({ key: theme, theme: themes[theme] })),
+      setTheme: (theme) => set(() => ({ key: theme, theme: themes[theme] })),
       toggle: () =>
         set((state) => {
           const newThemeKey: ThemeKeys = state.key === "light" ? "dark" : "light"
@@ -37,8 +25,8 @@ export const useTheme = create<ThemeStore>()(
         }),
     }),
     {
-      name: "theme-storage",
-      storage: createJSONStorage(() => zustandStorage),
+      name: "theme",
+      storage: createJSONStorage(() => ZustandStorage),
     }
   )
 )
