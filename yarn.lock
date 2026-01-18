@@ -2879,6 +2879,11 @@ fontfaceobserver@^2.1.0:
   resolved "https://registry.yarnpkg.com/fontfaceobserver/-/fontfaceobserver-2.3.0.tgz#5fb392116e75d5024b7ec8e4f2ce92106d1488c8"
   integrity sha512-6FPvD/IVyT4ZlNe7Wcn5Fb/4ChigpucKYSvD6a+0iMoLn2inpo711eyIcKjmDtE5XNcgAkSH9uN/nfAeZzHEfg==
 
+form-atoms@^3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/form-atoms/-/form-atoms-3.3.3.tgz#b96fb2ed2314e456abc698beb1720d3775a53db2"
+  integrity sha512-qiV/xNveQsXpV9t7+wfLtb4dK0ycPVriBm47M3xmG8R8wYNto58xjvBw+VvRGPzK9sd3X80L7tFm9JHcZptzOA==
+
 form-data@^4.0.4:
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.5.tgz#b49e48858045ff4cbf6b03e1805cebcad3679053"
@@ -3310,6 +3315,11 @@ jimp-compact@0.16.1:
   version "0.16.1"
   resolved "https://registry.yarnpkg.com/jimp-compact/-/jimp-compact-0.16.1.tgz#9582aea06548a2c1e04dd148d7c3ab92075aefa3"
   integrity sha512-dZ6Ra7u1G8c4Letq/B5EzAxj4tLFHL+cGtdpR+PVm4yzPDj+lCk+AbivWt1eOM+ikzkowtyV7qSqX6qr3t71Ww==
+
+jotai@^2.16.2:
+  version "2.16.2"
+  resolved "https://registry.yarnpkg.com/jotai/-/jotai-2.16.2.tgz#e9685183ac8669060c3120bff60f6cec044b0052"
+  integrity sha512-DH0lBiTXvewsxtqqwjDW6Hg9JPTDnq9LcOsXSFWCAUEt+qj5ohl9iRVX9zQXPPHKLXCdH+5mGvM28fsXMl17/g==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -4226,6 +4236,11 @@ react-is@^19.1.0:
   version "19.2.3"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-19.2.3.tgz#eec2feb69c7fb31f77d0b5c08c10ae1c88886b29"
   integrity sha512-qJNJfu81ByyabuG7hPFEbXqNcWSU3+eVus+KJs+0ncpGfMyYdvSmxiJxbWR65lYi1I+/0HBcliO029gc4F+PnA==
+
+react-native-auto-skeleton@^0.1.30:
+  version "0.1.30"
+  resolved "https://registry.yarnpkg.com/react-native-auto-skeleton/-/react-native-auto-skeleton-0.1.30.tgz#47d20162106abe11e8ad01ce81c7c76929787bea"
+  integrity sha512-+xm4R2ogzpVNGXj8ov2e2FWymoW27NzpEb9k36QyWLUQHxUd1pC08BtRGAQUpp3mXLkJqY5oEe6l/XYLHbqd+Q==
 
 react-native-gesture-handler@~2.28.0:
   version "2.28.0"
