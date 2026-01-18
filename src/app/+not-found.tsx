@@ -1,9 +1,10 @@
-import { theme } from "@/src/services/shared/hooks/theme";
-import { Link, Stack, usePathname } from "expo-router";
-import { StyleSheet, Text, View } from "react-native";
+import { Link, Stack, usePathname } from "expo-router"
+import { Text, View } from "react-native"
+import { StyleSheetTheme } from "../services/shared/utils/stylesheet"
 
 const NotFound = () => {
-  const pathname = usePathname();
+  const pathname = usePathname()
+  const styles = Styles()
   return (
     <>
       <Stack.Screen options={{ title: "Oops!" }} />
@@ -17,12 +18,12 @@ const NotFound = () => {
         </Link>
       </View>
     </>
-  );
-};
+  )
+}
 
-export default NotFound;
+export default NotFound
 
-const styles = StyleSheet.create({
+const Styles = StyleSheetTheme((theme) => ({
   container: {
     flex: 1,
     alignItems: "center",
@@ -43,4 +44,4 @@ const styles = StyleSheet.create({
     fontSize: theme.fontSizes.body1,
     color: "#2e78b7",
   },
-});
+}))

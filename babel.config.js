@@ -1,7 +1,7 @@
 /** @type {import('react-native-worklets/plugin').PluginOptions} */
 
 module.exports = function (api) {
-  api.cache(true);
+  api.cache(true)
   return {
     presets: ["babel-preset-expo"],
     env: {
@@ -9,5 +9,5 @@ module.exports = function (api) {
         plugins: [["transform-remove-console", { exclude: ["error", "warn"] }]],
       },
     },
-  };
-};
+  }
+}

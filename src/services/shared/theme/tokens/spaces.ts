@@ -8,4 +8,4 @@ export const Spaces = {
   xl: 24,
   xxl: 32,
   xxxl: 40,
-};
+}

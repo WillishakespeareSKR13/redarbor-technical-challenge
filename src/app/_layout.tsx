@@ -1,5 +1,5 @@
-import { Slot } from "expo-router";
+import { Slot } from "expo-router"
 
-const Root = () => <Slot />;
+const Root = () => <Slot />
 
-export default Root;
+export default Root

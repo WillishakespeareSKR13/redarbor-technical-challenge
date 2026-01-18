@@ -1,38 +1,36 @@
-import { useTheme } from "@/src/services/shared/hooks/theme";
-import { Button, Text, View } from "react-native";
-import { StyleSheetTheme } from "../services/shared/utils/stylesheet";
+import { useTheme } from "@/src/services/shared/hooks/theme"
+import { Text } from "@components"
+import { Button, View } from "react-native"
+import { StyleSheetTheme } from "../services/shared/utils/stylesheet"
 
 const ChangeTheme = () => {
-  const theme = useTheme();
-  const styles = useStyles();
+  const theme = useTheme()
+  const styles = useStyles()
   return (
     <>
-      <Text style={styles.subtitle}>Current Theme: {theme.key}</Text>
+      <Text>Current Theme: {theme.key}</Text>
       <Button
         onPress={() => {
-          theme.toggle?.();
+          theme.toggle?.()
         }}
         title="Toggle Theme"
       />
     </>
-  );
-};
+  )
+}
 
 const Screen = () => {
-  const styles = useStyles();
-  console.log(styles);
+  const styles = useStyles()
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Redarbor Technical Challenge</Text>
-      <Text style={styles.subtitle}>
-        Expo 54 + React Native + TypeScript + Zustand
-      </Text>
+      <Text>Redarbor Technical Challenge</Text>
+      <Text>Expo 54 + React Native + TypeScript + Zustand</Text>
       <ChangeTheme />
     </View>
-  );
-};
+  )
+}
 
-export default Screen;
+export default Screen
 
 const useStyles = StyleSheetTheme((theme) => ({
   container: {
@@ -42,16 +40,4 @@ const useStyles = StyleSheetTheme((theme) => ({
     justifyContent: "center",
     padding: theme.spaces.lg,
   },
-  title: {
-    fontSize: theme.fontSizes.h1,
-    fontWeight: "bold",
-    color: theme.colors.foreground[100],
-    marginBottom: theme.spaces.md,
-    textAlign: "center",
-  },
-  subtitle: {
-    fontSize: theme.fontSizes.body1,
-    color: theme.colors.gray[700],
-    textAlign: "center",
-  },
-}));
+}))

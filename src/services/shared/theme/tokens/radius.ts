@@ -8,4 +8,4 @@ export const Radius = {
   xl: 52,
   xxl: 64,
   full: 9999,
-};
+}

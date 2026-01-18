@@ -1,9 +1,9 @@
-import { Colors } from "./tokens/colors";
-import { FontFamily } from "./tokens/font-family";
-import { FontSizes } from "./tokens/font-sizes";
-import { Radius } from "./tokens/radius";
-import { Spaces } from "./tokens/spaces";
-import { Strokes } from "./tokens/strokes";
+import { Colors } from "./tokens/colors"
+import { FontFamily } from "./tokens/font-family"
+import { FontSizes } from "./tokens/font-sizes"
+import { Radius } from "./tokens/radius"
+import { Spaces } from "./tokens/spaces"
+import { Strokes } from "./tokens/strokes"
 
 export const themeBase = {
   colors: Colors,
@@ -12,7 +12,7 @@ export const themeBase = {
   stroke: Strokes,
   fontSizes: FontSizes,
   fontFamily: FontFamily,
-} as const;
+} as const
 
 export const themeDark = {
   ...themeBase,
@@ -22,7 +22,7 @@ export const themeDark = {
     foreground: Colors.light,
     background: Colors.dark,
   },
-} as const;
+} as const
 
 export const themeLight = {
   ...themeBase,
@@ -32,9 +32,9 @@ export const themeLight = {
     foreground: Colors.dark,
     background: Colors.light,
   },
-} as const;
+} as const
 
 export const themes = {
   dark: themeDark,
   light: themeLight,
-} as const;
+} as const

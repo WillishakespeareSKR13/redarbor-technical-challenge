@@ -9,4 +9,4 @@ export const FontSizes = {
   body3: 10,
   body4: 8,
   body5: 6,
-};
+}

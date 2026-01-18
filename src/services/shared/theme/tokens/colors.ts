@@ -179,4 +179,4 @@ export const Colors = {
     800: "#868e96",
     900: "#adb5bd",
   },
-} as const;
+} as const
