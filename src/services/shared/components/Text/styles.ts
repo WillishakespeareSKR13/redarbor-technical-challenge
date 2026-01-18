@@ -2,11 +2,12 @@ import { StyleSheetTheme } from "../../utils/stylesheet"
 import { GetColorTheme, GetFontFamilyTheme, GetFontSizeTheme, GetSpaceTheme } from "../../utils/theme"
 import { TextProps } from "./types"
 
-export const Styles = StyleSheetTheme<TextProps>((theme, props) => {
-  const fontFamily = GetFontFamilyTheme(theme, props.ff, theme.fontFamily.regular)
+export const Styles = StyleSheetTheme((theme, props: TextProps) => {
+  const fontFamily = GetFontFamilyTheme(theme, props.ff) ?? theme.fontFamily.regular
   const fontSize = GetFontSizeTheme(theme, props.fz) ?? theme.fontSizes.body1
-  const color = GetColorTheme(theme, props.c, theme.colors.foreground[100])
-  const styles = {
+  const color = GetColorTheme(theme, props.c) ?? theme.colors.foreground[100]
+
+  return {
     text: {
       width: props.w,
       height: props.h,
@@ -38,5 +39,4 @@ export const Styles = StyleSheetTheme<TextProps>((theme, props) => {
       textAlign: props.ta,
     },
   }
-  return styles
 })
