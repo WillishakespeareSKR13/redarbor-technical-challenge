@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Redarbor Jobs",
+    "slug": "redarbor-jobs",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "scheme": "redarborjobs",
+    "platforms": ["ios", "android"],
+    "jsEngine": "hermes",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.redarbor.jobs"
+    },
+    "android": {
+      "package": "com.redarbor.jobs",
+      "adaptiveIcon": {
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": ["expo-router"]
+  }
+}
