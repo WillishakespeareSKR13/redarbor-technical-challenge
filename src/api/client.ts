@@ -1,15 +1,15 @@
 import { CONFIG } from "@/src/config"
 import { QueryClient } from "@tanstack/react-query"
-import axios from "axios"
+import axiosClient from "axios"
 
-export const client = axios.create({
+export const axios = axiosClient.create({
   baseURL: CONFIG.API_URL,
   headers: {
     "Content-Type": "application/json",
   },
 })
 
-export const clientQuery = new QueryClient({
+export const query = new QueryClient({
   defaultOptions: {
     queries: {
       staleTime: 5 * 60 * 1000,
