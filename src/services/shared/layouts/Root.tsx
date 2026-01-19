@@ -1,7 +1,8 @@
 import "react-native-reanimated"
 
 import { GestureHandlerRootView } from "react-native-gesture-handler"
-import { ProviderQuery } from "../providers/Query.ts"
+import { ProviderFont } from "../providers/Fonts"
+import { ProviderQuery } from "../providers/Query"
 import { ProviderSplash } from "../providers/Splash"
 import { ProviderStore } from "../providers/Store"
 export { ErrorBoundary } from "expo-router"
@@ -17,7 +18,9 @@ export const LayoutRoot = (props: LayoutRootProps) => {
     <ProviderQuery>
       <ProviderStore>
         <GestureHandlerRootView>
-          <ProviderSplash>{children}</ProviderSplash>
+          <ProviderFont>
+            <ProviderSplash>{children}</ProviderSplash>
+          </ProviderFont>
         </GestureHandlerRootView>
       </ProviderStore>
     </ProviderQuery>
