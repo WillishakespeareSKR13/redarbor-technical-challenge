@@ -67,7 +67,7 @@ const TabBarItem = (props: TabBarItemProps) => {
 
   const animatedTouch = useAnimationButtonTouch(0.08)
 
-  const styles = Styles({ active: false })
+  const styles = Styles({ active: active })
 
   if (hide) return null
 
