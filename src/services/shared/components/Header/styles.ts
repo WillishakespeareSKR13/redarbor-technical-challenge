@@ -136,8 +136,8 @@ export const Styles = StyleSheetTheme((theme, props: HeaderProps) => {
             lineHeight: 1.3 * theme.fontSizes.body1,
           },
           xxl: {
-            fontSize: theme.fontSizes.h4,
-            lineHeight: 1.3 * theme.fontSizes.h4,
+            fontSize: theme.fontSizes.body1,
+            lineHeight: 1.3 * theme.fontSizes.body1,
           },
           xxxl: {
             fontSize: theme.fontSizes.h3,

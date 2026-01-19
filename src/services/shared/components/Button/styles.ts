@@ -34,6 +34,10 @@ export const Styles = StyleSheetTheme((theme, props: ButtonProps) => {
       marginRight: GetSpaceTheme(theme, props.mr),
       marginVertical: GetSpaceTheme(theme, props.my),
       marginHorizontal: GetSpaceTheme(theme, props.mx),
+      flex: props.flex,
+      flexGrow: props.grow,
+      flexShrink: props.shrink,
+      flexBasis: props.basis,
 
       fontWeight: props.fw,
       flexDirection: "row",
