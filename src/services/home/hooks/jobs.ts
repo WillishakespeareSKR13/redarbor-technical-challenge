@@ -31,3 +31,16 @@ export const useJobFavorites = () => {
   })
   return query
 }
+
+export const useJobDetails = (jobId: number) => {
+  const query = useQuery<Job>({
+    queryKey: ["job_details", jobId],
+    queryFn: () =>
+      axios.get(`/remote-jobs`).then((res) => {
+        const job = (res?.data?.jobs ?? []).find((job: Job) => job.id === jobId)
+        if (!job) throw new Error("Job not found")
+        return job
+      }),
+  })
+  return query
+}
