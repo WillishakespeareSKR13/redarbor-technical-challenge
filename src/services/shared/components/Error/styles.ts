@@ -4,6 +4,7 @@ import { ErrorProps } from "./types"
 export const Styles = StyleSheetTheme((theme, _: ErrorProps) => ({
   error: {
     fontSize: theme.fontSizes.body2,
+    fontWeight: "bold",
     color: theme.colors.red[500],
     variants: {
       status: {

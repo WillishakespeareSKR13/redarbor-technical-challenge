@@ -17,8 +17,6 @@ export const Error = (props: ErrorProps) => {
 
   return (
     <Text
-      fz="body1"
-      fw="600"
       entering={FadeInUp.mass(0.5).stiffness(900).damping(20).duration(200)}
       exiting={FadeOutUp.mass(0.5).stiffness(900).damping(20).duration(200)}
       {...rest}

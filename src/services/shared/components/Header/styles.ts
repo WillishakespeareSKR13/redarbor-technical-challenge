@@ -87,22 +87,22 @@ export const Styles = StyleSheetTheme((theme, props: HeaderProps) => {
           },
           md: {},
           lg: {
-            fontWeight: "bold",
+            fontWeight: "700",
             fontSize: theme.fontSizes.h5,
             lineHeight: 1 * theme.fontSizes.h5,
           },
           xl: {
-            fontWeight: "bold",
+            fontWeight: "700",
             fontSize: theme.fontSizes.h4,
             lineHeight: 1 * theme.fontSizes.h4,
           },
           xxl: {
-            fontWeight: "bold",
+            fontWeight: "700",
             fontSize: theme.fontSizes.h3,
             lineHeight: 1 * theme.fontSizes.h3,
           },
           xxxl: {
-            fontWeight: "bold",
+            fontWeight: "700",
             fontSize: theme.fontSizes.h1,
             lineHeight: 1 * theme.fontSizes.h1,
           },

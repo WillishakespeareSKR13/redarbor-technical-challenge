@@ -18,14 +18,14 @@ export const Styles = StyleSheetTheme((theme, props: ButtonProps) => {
       maxWidth: props.maw,
       maxHeight: props.mah,
       minWidth: props.miw,
-      minHeight: props.mih ?? 44,
+      minHeight: props.mih ?? 40,
       padding: GetSpaceTheme(theme, props.p),
       paddingTop: GetSpaceTheme(theme, props.pt),
       paddingBottom: GetSpaceTheme(theme, props.pb),
       paddingLeft: GetSpaceTheme(theme, props.pl),
       paddingRight: GetSpaceTheme(theme, props.pr),
       paddingVertical: GetSpaceTheme(theme, props.py) ?? 12,
-      paddingHorizontal: GetSpaceTheme(theme, props.px) ?? 16,
+      paddingHorizontal: GetSpaceTheme(theme, props.px) ?? 20,
       margin: GetSpaceTheme(theme, props.m),
       marginTop: GetSpaceTheme(theme, props.mt),
       marginBottom: GetSpaceTheme(theme, props.mb),
@@ -67,8 +67,6 @@ export const Styles = StyleSheetTheme((theme, props: ButtonProps) => {
         fullWidth: {
           true: {
             width: "100%",
-            flexGrow: 1,
-            flexShrink: 1,
           },
           false: {},
         },
@@ -100,13 +98,14 @@ export const Styles = StyleSheetTheme((theme, props: ButtonProps) => {
     },
     text: {
       fontSize,
-      fontWeight: "600",
+      lineHeight: 1.3 * fontSize,
+      fontWeight: 500,
       color: invert,
       variants: {
         variant: {
           filled: {},
           light: {
-            fontWeight: "700",
+            fontWeight: 800,
             color,
           },
           outline: {

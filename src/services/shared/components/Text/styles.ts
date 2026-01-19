@@ -33,7 +33,7 @@ export const Styles = StyleSheetTheme((theme, props: TextProps) => {
       flex: props.flex,
       fontFamily: fontFamily,
       fontSize: fontSize,
-      fontWeight: props.fw ?? "500",
+      fontWeight: props.fw ?? "400",
       lineHeight: props.lh ?? 1.3 * fontSize,
       color: color,
       textAlign: props.ta,
