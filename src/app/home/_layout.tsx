@@ -1,10 +1,10 @@
+import { NavigationUser } from "@/src/services/home/navigations/User"
 import { AuthPrivate } from "@/src/services/shared/auth/Private"
-import { Slot } from "expo-router"
 
 const Layout = () => {
   return (
     <AuthPrivate>
-      <Slot />
+      <NavigationUser />
     </AuthPrivate>
   )
 }
