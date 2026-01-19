@@ -33,6 +33,7 @@ export type PropsFlex = {
   flex?: number
   grow?: number
   shrink?: number
+  overflow?: ViewStyle["overflow"]
   basis?: DimensionValue
   self?: ViewStyle["alignSelf"]
   justify?: ViewStyle["justifyContent"]

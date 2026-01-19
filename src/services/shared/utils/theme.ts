@@ -7,7 +7,7 @@ export const GetColorTheme = (theme: Theme, color?: ColorScheme) => {
   const isHexOrHexRGB = /^#([0-9A-F]{3}){1,2}$/i.test(color) || /^#([0-9A-F]{8})$/i.test(color)
   if (isHexOrHexRGB) return color
   const color_get = get(theme.colors as any, color)
-  const color_find = color_get ? (typeof color_get === "string" ? color_get : color_get[300]) : undefined
+  const color_find = color_get ? (typeof color_get === "string" ? color_get : color_get[500]) : undefined
   const color_found = (color_find ?? theme.colors.foreground[100]) as string
   return color_found
 }
@@ -36,6 +36,7 @@ export const GetSpaceTheme = (theme: Theme, size?: SpaceSchema) => {
 
 export const GetRadiusTheme = (theme: Theme, radius?: RadiusSchema) => {
   if (radius === undefined) return undefined
+  if (typeof radius === "number") return radius
   const radius_get = get(theme.radius as any, `${radius}`)
   const radius_found = (radius_get ?? theme.radius.md) as number
   return radius_found

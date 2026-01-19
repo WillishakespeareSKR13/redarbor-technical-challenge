@@ -4,7 +4,7 @@ import { ViewProps } from "./types"
 
 export const Styles = StyleSheetTheme((theme, props: ViewProps) => ({
   view: {
-    width: props.w ?? "100%",
+    width: props.w ?? (props.flex ? undefined : "100%"),
     height: props.h ?? "auto",
     maxWidth: props.maw,
     maxHeight: props.mah,
@@ -26,6 +26,9 @@ export const Styles = StyleSheetTheme((theme, props: ViewProps) => ({
     marginHorizontal: GetSpaceTheme(theme, props.mx),
     flex: props.flex,
     flexWrap: props.wrap,
+    flexGrow: props.grow,
+    flexShrink: props.shrink,
+    overflow: props.overflow,
     backgroundColor: GetColorTheme(theme, props.bg) ?? "transparent",
     borderRadius: GetRadiusTheme(theme, props.r) ?? theme.radius.none,
     flexDirection: props.direction ?? "column",

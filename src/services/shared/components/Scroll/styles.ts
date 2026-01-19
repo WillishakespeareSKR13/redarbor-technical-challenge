@@ -28,6 +28,8 @@ export const Styles = StyleSheetTheme((theme, props: ScrollProps) => ({
 
     flex: props.flex,
     flexWrap: props.wrap,
+    flexGrow: props.grow,
+    flexShrink: props.shrink,
     backgroundColor: GetColorTheme(theme, props.bg) ?? "transparent",
     borderRadius: GetRadiusTheme(theme, props.r) ?? theme.radius.none,
     flexDirection: props.direction ?? "column",

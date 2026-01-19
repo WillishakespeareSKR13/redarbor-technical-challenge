@@ -31,6 +31,10 @@ export const Styles = StyleSheetTheme((theme, props: TextProps) => {
       marginHorizontal: GetSpaceTheme(theme, props.mx),
 
       flex: props.flex,
+      flexGrow: props.grow,
+      flexShrink: props.shrink,
+      flexBasis: props.basis,
+      overflow: props.overflow,
       fontFamily: fontFamily,
       fontSize: fontSize,
       fontWeight: props.fw ?? "400",
