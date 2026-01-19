@@ -14,12 +14,7 @@ export const ScreenHome = () => {
   const isEmpty = data?.length === 0
 
   return (
-    <Main
-      bg="background.400"
-      edges={["top", "right", "left"]}
-      headerBG="background.100"
-      header={<Header bg="background.100" title="Lista de Trabajos" size="xxl" p="md" />}
-    >
+    <Main bg="background.400" edges={["top", "right", "left"]} headerBG="background.100">
       <Conditional conditional={Boolean(error)}>
         <ScreenHomeError />
         <View flex={1} gap={0}>
