@@ -13,7 +13,7 @@ const NotFound = () => {
         <Text style={styles.title}>
           No match for <Text style={{ fontWeight: "normal" }}>{pathname}</Text>
         </Text>
-        <Link href="/auth/login" style={styles.link}>
+        <Link href="/login" style={styles.link}>
           <Text style={styles.linkText}>Go to login screen!</Text>
         </Link>
       </View>
@@ -33,7 +33,7 @@ const Styles = StyleSheetTheme((theme) => ({
   },
   title: {
     fontSize: theme.fontSizes.h4,
-    fontWeight: "bold",
+    fontWeight: "700",
     color: theme.colors.foreground[100],
   },
   link: {
