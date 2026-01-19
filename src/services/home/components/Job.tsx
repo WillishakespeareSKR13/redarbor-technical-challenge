@@ -1,6 +1,7 @@
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6"
 import { Image } from "react-native"
 import { ActionButton, Shadow, ShadowProps, Tag, Text, View } from "../../shared/components"
+import { useSession } from "../../shared/hooks/session"
 import { useTheme } from "../../shared/hooks/theme"
 import { Sanitize } from "../../shared/utils/sanitize"
 import { JOB_TYPES_STATUS } from "../constants/jobs"
@@ -15,12 +16,13 @@ const MAX_LENGTH = 200
 
 export const CardJob = (props: CardJobProps) => {
   const { client, isLoading, ...rest } = props
+  const { session } = useSession()
   const { theme } = useTheme()
   const description = client?.description ?? ""
   const subtitle = `${Sanitize(description)}`.slice(0, MAX_LENGTH).trim().replace(/\n/g, " ")
   const jobType = JOB_TYPES_STATUS.find((jt) => jt.id === client?.job_type)
   const { getFavorite, toggleFavorite } = useFavorites()
-  const isFavorite = getFavorite(client?.id ?? 0)
+  const isFavorite = getFavorite(session!, client?.id ?? 0)
 
   if (isLoading) return <CardJobSkeleton />
 
@@ -55,7 +57,7 @@ export const CardJob = (props: CardJobProps) => {
               variant="light"
               size={36}
               icon={<FontAwesome6 name="heart" solid size={16} />}
-              onPress={() => toggleFavorite(client?.id ?? 0)}
+              onPress={() => toggleFavorite(session!, client?.id ?? 0)}
             />
           </View>
           <Text fz="body1" c="gray.800" numberOfLines={3}>

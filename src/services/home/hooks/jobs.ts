@@ -1,5 +1,6 @@
 import { axios } from "@/src/api/client"
 import { useQuery } from "@tanstack/react-query"
+import { useSession } from "../../shared/hooks/session"
 import { Job } from "../types/job"
 import { useFavorites } from "./favorites"
 import { useFilter } from "./filters"
@@ -18,8 +19,9 @@ export const useJobs = () => {
 }
 
 export const useJobFavorites = () => {
+  const { session } = useSession()
   const { getAllFavorites } = useFavorites()
-  const favoriteIds = getAllFavorites()
+  const favoriteIds = getAllFavorites(session!)
   const query = useQuery<Job[]>({
     queryKey: ["jobs_favorites", favoriteIds],
     queryFn: () =>
