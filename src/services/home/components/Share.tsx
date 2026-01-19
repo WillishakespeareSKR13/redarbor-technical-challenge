@@ -36,7 +36,8 @@ export const JobShare = (props: JobShareProps) => {
       </Button>
       <Button
         fullWidth
-        variant="outline"
+        variant={isFavorite ? "filled" : "outline"}
+        c={isFavorite ? "red.600" : "foreground.100"}
         onPress={() => toggleFavorite(session!, job?.id ?? 0)}
         leftSection={<FontAwesome6 name="heart" solid={isFavorite} size={16} />}
       >

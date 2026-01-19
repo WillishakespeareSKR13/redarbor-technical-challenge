@@ -80,7 +80,24 @@ export const ScreenJobDetail = () => {
             title="Detalle del empleo"
             leftSection={<FontAwesome6 name="file-lines" size={20} color={theme.colors.blue[500]} />}
           />
-          <RenderHtml source={{ html: data?.description || "" }} />
+          <RenderHtml
+            tagsStyles={{
+              p: { color: theme.colors.foreground[100] },
+              ul: { color: theme.colors.foreground[100] },
+              ol: { color: theme.colors.foreground[100] },
+              li: { color: theme.colors.foreground[100] },
+              strong: { color: theme.colors.foreground[100], fontWeight: "bold" },
+              em: { color: theme.colors.foreground[100], fontStyle: "italic" },
+              h1: { color: theme.colors.foreground[100], fontSize: 24, fontWeight: "bold" },
+              h2: { color: theme.colors.foreground[100], fontSize: 22, fontWeight: "bold" },
+              h3: { color: theme.colors.foreground[100], fontSize: 20, fontWeight: "bold" },
+              h4: { color: theme.colors.foreground[100], fontSize: 18, fontWeight: "bold" },
+              h5: { color: theme.colors.foreground[100], fontSize: 16, fontWeight: "bold" },
+              h6: { color: theme.colors.foreground[100], fontSize: 14, fontWeight: "bold" },
+              span: { color: theme.colors.foreground[100] },
+            }}
+            source={{ html: data?.description || "" }}
+          />
         </View>
         <Divider />
         <JobShare job={data} />
@@ -91,48 +108,23 @@ export const ScreenJobDetail = () => {
 
 const ScreenJobDetailSkeleton = () => {
   return (
-    <Scroll showsVerticalScrollIndicator={false}>
-      <View flex={1} p="md" direction="column" gap="md">
-        <Shadow>
-          <View w="100%" direction="column" gap="md">
-            <View w="100%" direction="row" align="flex-start" gap="md">
-              <View w={64} h={64} bg="background.400" r={12} />
-              <View flex={1} direction="column" gap="xxs">
-                <View w="100%" h={20} bg="background.400" r={4} />
-                <View w="70%" h={16} bg="background.400" r={4} />
-              </View>
-              <View w={40} h={40} bg="background.400" r={20} />
-            </View>
-            <Divider />
-            <View w="100%" direction="column" gap="xs">
-              <View w="80%" h={16} bg="background.400" r={4} />
-              <View w="60%" h={16} bg="background.400" r={4} />
-            </View>
-            <Divider />
-            <View w="100%" direction="row" gap="md">
-              <View flex={1} h={40} bg="background.400" r={8} />
-              <View flex={1} h={40} bg="background.400" r={8} />
-            </View>
-            <Divider />
-            <View w="50%" h={16} bg="background.400" r={4} />
-          </View>
-        </Shadow>
-        <Shadow>
-          <View w="100%" direction="column" gap="md">
-            <View w="60%" h={20} bg="background.400" r={4} />
-            <Divider />
-            <View w="100%" h={100} bg="background.400" r={4} />
-          </View>
-        </Shadow>
-        <View w="100%" direction="column" gap="sm">
-          <View w="100%" h={48} bg="background.400" r={8} />
-          <View w="100%" direction="row" gap="sm">
-            <View flex={1} h={48} bg="background.400" r={8} />
-            <View flex={1} h={48} bg="background.400" r={8} />
-          </View>
-        </View>
-      </View>
-    </Scroll>
+    <Main edges={["top", "right", "left"]} bg="background.100">
+      <Scroll showsVerticalScrollIndicator={false} direction="column" p="md" gap="md">
+        <Shadow h={32} w={200} r="sm" bg="background.400" />
+        <Shadow h={64} w={64} r="lg" bg="background.400" />
+        <Shadow h={20} w={150} r="sm" bg="background.400" />
+        <Shadow h={20} w={100} r="sm" bg="background.400" />
+        <Shadow h={20} w={120} r="sm" bg="background.400" />
+        <Shadow h={20} w={80} r="sm" bg="background.400" />
+        <Divider />
+        <Shadow h={20} w={120} r="sm" bg="background.400" />
+        <Divider />
+        <Shadow h={24} w={180} r="sm" bg="background.400" />
+        <Shadow h={200} w={"100%"} r="sm" bg="background.400" />
+        <Divider />
+        <Shadow h={24} w={180} r="sm" bg="background.400" />
+      </Scroll>
+    </Main>
   )
 }
 
