@@ -27,5 +27,5 @@ export const useFilter = create<FIlterStore>((set, get) => ({
     if (search) params.append("search", search)
     return params.toString()
   },
-  clear: () => set({ category: "", search: "" }),
+  clear: () => set({ category: "", search: "", typeJob: "" }),
 }))

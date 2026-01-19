@@ -55,9 +55,9 @@ export const ScreenHome = () => {
 
 const ScreenHomeEmpty = () => {
   const { refetch } = useJobs()
-  const { getQueryParams, clear } = useFilter()
+  const { getQueryParams, clear, typeJob } = useFilter()
   const queryParams = getQueryParams()
-  const hasParams = Boolean(queryParams.length)
+  const hasParams = Boolean(queryParams.length) || Boolean(typeJob)
   return (
     <View flex={1} justify="center" align="center" p="md">
       <View flex={1} justify="center" align="center" bg="background.100" r="xs" p="md">
