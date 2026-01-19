@@ -12,6 +12,12 @@ const TABS: TabsScreenProps[] = [
     },
   },
   {
+    name: "job-details",
+    options: {
+      hide: true,
+    },
+  },
+  {
     name: "favorites",
     options: {
       title: "Favoritos",
