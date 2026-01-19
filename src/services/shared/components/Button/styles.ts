@@ -6,14 +6,15 @@ import { ButtonProps } from "./types"
 export const Styles = StyleSheetTheme((theme, props: ButtonProps) => {
   const color = GetColorTheme(theme, props.c) ?? theme.colors.foreground[100]
   const invert = ContrastColor(color)
-  const color_alt = GetColorTheme(theme, props.c) ?? theme.colors.background[100]
+  const color_alt = props.c ? ColorTransparent(color, 0.1) : theme.colors.background[100]
+  const color_alt_border = props.c ? color : theme.colors.background[400]
   const fontSize = GetFontSizeTheme(theme, props.fz) ?? theme.fontSizes.body1
   const radius = GetRadiusTheme(theme, props.r) ?? theme.radius.full
 
   return {
     button: {
       alignSelf: props.self,
-      width: props.fullWidth ? "auto" : props.w,
+      width: props.w,
       height: props.h,
       maxWidth: props.maw,
       maxHeight: props.mah,
@@ -41,11 +42,14 @@ export const Styles = StyleSheetTheme((theme, props: ButtonProps) => {
       justifyContent: "center",
       borderRadius: radius,
       backgroundColor: color,
+      borderColor: color,
+      borderWidth: 1,
       variants: {
         variant: {
           filled: {},
           light: {
-            backgroundColor: props.c ? ColorTransparent(color, 0.1) : color_alt,
+            backgroundColor: color_alt,
+            borderColor: color_alt_border,
           },
           outline: {
             backgroundColor: "transparent",

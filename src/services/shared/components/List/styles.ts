@@ -1,8 +1,9 @@
 import { StyleSheetTheme } from "../../utils/stylesheet"
 import { GetColorTheme, GetRadiusTheme, GetSpaceTheme } from "../../utils/theme"
+import { ViewProps } from "../View/types"
 import { ListProps } from "./types"
 
-export const Styles = StyleSheetTheme((theme, props: ListProps<any>) => ({
+export const StylesList = StyleSheetTheme((theme, props: ListProps<any>) => ({
   list: {
     width: props.w,
     height: props.h,
@@ -31,6 +32,9 @@ export const Styles = StyleSheetTheme((theme, props: ListProps<any>) => ({
     borderRadius: GetRadiusTheme(theme, props.r) ?? theme.radius.none,
     gap: GetSpaceTheme(theme, props.gap),
   },
+}))
+
+export const StylesContent = StyleSheetTheme((theme, props: ViewProps) => ({
   content: {
     width: props.w,
     height: props.h,
@@ -59,7 +63,10 @@ export const Styles = StyleSheetTheme((theme, props: ListProps<any>) => ({
     borderRadius: GetRadiusTheme(theme, props.r) ?? theme.radius.none,
     gap: GetSpaceTheme(theme, props.gap),
   },
-  column_wrapper: {
+}))
+
+export const StylesColumn = StyleSheetTheme((theme, props: ViewProps) => ({
+  column: {
     width: props.w,
     height: props.h,
     maxWidth: props.maw,

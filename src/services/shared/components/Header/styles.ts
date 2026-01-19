@@ -7,6 +7,7 @@ export const Styles = StyleSheetTheme((theme, props: HeaderProps) => {
 
   return {
     container: {
+      flexShrink: 1,
       width: props?.w ?? "100%",
       gap: gap,
       flexDirection: "column",
@@ -26,6 +27,7 @@ export const Styles = StyleSheetTheme((theme, props: HeaderProps) => {
       flexDirection: "row",
       justifyContent: "space-between",
       alignItems: "center",
+      minHeight: 38,
       gap: theme.spaces.lg,
       variants: {
         size: {
